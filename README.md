@@ -4,7 +4,7 @@
 
 ### Intro 
 
-Build ad banners with ES6 & Greensock animations, leveraging the FF0000-ad-tech library with Velvet integration. For a detailed walk through, including install, development and authoring, see the [tmpl-standard-base README](https://github.com/ff0000-ad-tech/tmpl-standard-base/) as this template is a variation of that template.
+Build ad banners with ES6 & Greensock animations, leveraging the FF0000-ad-tech library with Velvet integration. For a detailed walk through, including install, development and authoring, see [tmpl-standard-base](https://github.com/ff0000-ad-tech/tmpl-standard-base/) as this template is a variation of that.
 
 ### FAT Framework
 
