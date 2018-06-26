@@ -2,6 +2,8 @@
 
 # tmpl-velvet-base
 
+## ![Velvet Logo](https://github.com/ff0000-ad-tech/readme-assets/blob/master/ad-velvet/velvet-logo.png)
+
 ### Intro 
 
 Build ad banners with ES6 & Greensock animations, leveraging the FF0000-ad-tech library with Velvet integration. 
