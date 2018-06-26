@@ -1,8 +1,8 @@
 ##### RED Interactive Agency - Ad Technology
 
-# tmpl-velvet-base
-
 ## ![Velvet Logo](https://github.com/ff0000-ad-tech/readme-assets/blob/master/ad-velvet/velvet-logo.png)
+
+# tmpl-velvet-base
 
 ### Intro 
 
