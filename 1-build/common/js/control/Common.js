@@ -17,6 +17,7 @@
 		modules that were added procedurally during the Build Source creation.
 */
 import AdData from '../data/AdData.js'
+import { ImageManager } from 'ad-control'
 import * as Velvet from 'ad-velvet'
 
 
@@ -37,7 +38,10 @@ export class Common {
 
 			Promise.all(promises)
 				.then(() => {
+					this.addPreloadedImages()
 					this.prepareAdData()
+				})
+				.then(() => {
 					resolve()
 				})
 				.catch(err => {
@@ -49,9 +53,28 @@ export class Common {
 	// prepare ad manager
 	static prepareVelvet() {
 		console.log('Common.prepareVelvet()')
+		Velvet.addEventListener(Velvet.events.FAIL, global.failAd)
+		Velvet.addEventListener(Velvet.events.STATIC, global.useStatic)
 		return Promise.resolve(Velvet.init(adParams.velvet, adParams.dateSettings))
 	}
 
+
+	/**
+		@memberof Common
+		@method addPreloadedImages
+		@desc
+			Makes all images associated with the preloader available to the ad as a whole
+	*/
+	static addPreloadedImages() {
+		console.log('Common.addPreloadedImages()')
+		ImageManager.addToDictionary(assets.preloadedImages)
+
+		/* ---- USER-DEFINED Common -------------------------------------------------------
+		*
+		*		This is BEFORE the image-queue is loaded...
+		*/
+		// -->
+	}
 
 	/**
 		@memberof Common
