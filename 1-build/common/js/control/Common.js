@@ -20,7 +20,6 @@ import AdData from '../data/AdData.js'
 import { ImageManager } from 'ad-control'
 import * as Velvet from 'ad-velvet'
 
-
 export class Common {
 	/**
 		@memberof Common
@@ -33,8 +32,6 @@ export class Common {
 
 			// json map
 			promises.push(this.prepareVelvet())
-
-
 
 			Promise.all(promises)
 				.then(() => {
@@ -57,7 +54,6 @@ export class Common {
 		Velvet.addEventListener(Velvet.events.STATIC, global.useStatic)
 		return Promise.resolve(Velvet.init(adParams.velvet, adParams.dateSettings))
 	}
-
 
 	/**
 		@memberof Common
@@ -84,7 +80,6 @@ export class Common {
 	*/
 	static prepareAdData() {
 		console.log('Common.prepareAdData()')
-
 
 		global.adData = new AdData()
 
