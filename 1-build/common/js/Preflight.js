@@ -1,6 +1,7 @@
 import AdData from '@common/js/AdData.js'
 import { ImageManager } from 'ad-control'
 import * as Velvet from 'ad-velvet'
+import { Markup } from 'ad-view'
 
 
 /**
@@ -40,7 +41,8 @@ export class Preflight {
 		console.log('Common.prepareVelvet()')
 		Velvet.addEventListener(Velvet.events.FAIL, global.failAd)
 		Velvet.addEventListener(Velvet.events.STATIC, global.useStatic)
-		return Promise.resolve(Velvet.init(adParams.velvet, adParams.dateSettings))
+		adParams.dateSettings.inDev = adParams.environmentId == 'staging' || adParams.environmentId == 'debug'
+		return Promise.resolve(Velvet.init(adParams.velvet, adParams.dateSettings, adParams.adSize, Markup.get('main')))
 	}
 
 

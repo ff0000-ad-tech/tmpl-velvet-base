@@ -1,5 +1,6 @@
 import '@common/fonts/template_font.woff'
 import * as Velvet from 'ad-velvet'
+import { Markup } from 'ad-view'
 import { ImageManager } from 'ad-control'
 
 
